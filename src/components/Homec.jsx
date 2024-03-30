@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
 import TypeWriter from 'typewriter-effect';
+import f22 from '../images/f22.jpg';
 
 const Section = styled.div`
     height: 100vh;
@@ -19,9 +20,20 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 `;
 
 const Right = styled.div`
+    flex: 3;
+    position: relative;
+`;
+
+const Img = styled.img`
+    
 `;
 
 const Home = () => {
@@ -51,7 +63,7 @@ const Home = () => {
                     />
                 </Left>
                 <Right>
-                
+                    <Img src={f22}/>
                 </Right>  
             </Container>
         </Section>
