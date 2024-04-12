@@ -79,7 +79,7 @@ const Img = styled.img`
 
 const Home = () => {
     return (
-        <Section>
+        <Section id="home">
             <Navbar/>
             <Container>
                 <Left>

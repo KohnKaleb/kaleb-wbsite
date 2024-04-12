@@ -19,6 +19,12 @@ const List = styled.div`
 `;
 
 const ListItem = styled.div`
+    cursor: pointer;
+`
+
+const AElements = styled.a`
+    all: initial;
+    cursor: pointer;
 `
 
 const Icons = styled.div`
@@ -40,17 +46,16 @@ const Navbar = () => {
             <Container>
                 <Links>
                     <List>
-                        <ListItem>Home</ListItem>
-                        <ListItem>About</ListItem>
-                        <ListItem>Projects</ListItem>
-                        <ListItem>Contact</ListItem>
+                        <ListItem><AElements href="#home">Home</AElements></ListItem>
+                        <ListItem><AElements href="#about">About</AElements></ListItem>
+                        <ListItem><AElements href="#projects">Projects</AElements></ListItem>
+                        <ListItem><AElements href="#resume">Resume</AElements></ListItem>
+                        <ListItem><AElements href="#contact">Contact</AElements></ListItem>
                     </List>
                 </Links>
                 <Icons>
-
                 </Icons>
             </Container>
-            <div>Navbar</div>
         </Section>
     )
 }

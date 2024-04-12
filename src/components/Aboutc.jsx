@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from './Navbar.jsx';
 
 const Section = styled.div`
     height: 100vh;
@@ -9,8 +8,8 @@ const Section = styled.div`
 
 const About = () => {
     return (
-        <Section>
-            <Navbar/>
+        <Section id="about">
+            <div>About</div>
         </Section>
     )
 }
