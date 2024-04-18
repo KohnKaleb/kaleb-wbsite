@@ -26,6 +26,12 @@ const Contact = () => {
                 </Top>
                 <Bottom>
                     <div>Reach out ot me</div>
+<<<<<<< HEAD
+=======
+                    <input>Name</input>
+                    <input>Email</input>
+                    <input>Message</input>
+>>>>>>> 2668252702dffd2496347f1dc3cf1ed0c3e7c079
                     <button>Submit</button>
                 </Bottom>
             </Container>
