@@ -26,9 +26,6 @@ const Contact = () => {
                 </Top>
                 <Bottom>
                     <div>Reach out ot me</div>
-                    <input>Name</input>
-                    <input>Email</input>
-                    <input>Message</input>
                     <button>Submit</button>
                 </Bottom>
             </Container>
