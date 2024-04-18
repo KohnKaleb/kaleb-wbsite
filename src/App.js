@@ -4,6 +4,7 @@ import Contact from "./components/Contactc.jsx";
 import Home from "./components/Homec.jsx";
 import Projects from "./components/Projectsc.jsx";
 import background from "./images/background.jpg";
+import Resume from "./components/Resume.jsx";
 
 const Container = styled.div`
   height: 100vh;
@@ -22,6 +23,7 @@ function App() {
       <Home/>
       <About/>
       <Projects/>
+      <Resume/>
       <Contact/>
     </Container>
   );

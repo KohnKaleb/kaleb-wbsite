@@ -8,7 +8,7 @@ const Section = styled.div`
 
 const Projects = () => {
     return (
-        <Section>
+        <Section id="projects">
             <div>Projects</div>
         </Section>
     )
