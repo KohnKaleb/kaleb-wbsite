@@ -1,7 +1,9 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+import Navbar from "./Navbar";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Section = styled.div`
   height: 100vh;
@@ -54,7 +56,6 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log(process.env.REACT_APP_EMAIL_JS_SECRET_KEY);
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAIL_JS_SECRET_KEY,
@@ -67,15 +68,20 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          toast.success('Message sent!', { position: 'top-right' })
         },
         (error) => {
           console.log("FAILED...", error.text);
+          toast.error('Message failed to send!', { position: 'top-right' })
         }
       );
+
+      form.current.reset();
   };
 
   return (
     <Section id="contact">
+      <Navbar />
       <Container>
         <Top>
           <div>Follow me on socials</div>
@@ -109,6 +115,7 @@ const Contact = () => {
             />
             <button type="submit">Submit</button>
           </form>
+          <Toaster />
         </Bottom>
       </Container>
     </Section>

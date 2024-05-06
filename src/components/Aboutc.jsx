@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
@@ -23,10 +24,9 @@ const Bottom = styled.div`
 const Logos = styled.div``;
 
 const About = () => {
-  const gltf = useRef();
-
   return (
     <Section id="about">
+      <Navbar />
       <div>About</div>
       <Top>
         <h1>Kaleb Kohn</h1>
@@ -42,7 +42,6 @@ const About = () => {
           Frameworks: React, Vue.js, Spring MVC, Django, Node.js, Express,
           Android Studio
         </div>
-        <div ref={gltf}></div>
         <Logos></Logos>
       </Bottom>
     </Section>

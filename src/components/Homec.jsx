@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Navbar from './Navbar';
 import TypeWriter from 'typewriter-effect';
 import f22 from '../images/f22.png';
@@ -60,20 +60,20 @@ const Right = styled.div`
     }
 `;
 
+const animate = keyframes`
+    to {
+        transform: translateY(50px);
+    }
+`;
+
 const Img = styled.img`
     max-width: 40%;
     max-height: auto;
-    animation: animate 2s infinite ease alternate;
+    animation: ${animate} 3s infinite ease alternate;
 
     @media only screen and (max-width: 768px) {
         width: 300px;
         height: 300px;
-    }
-
-    keyframes animate {
-        to {
-        transform: translateY(20px);
-        }
     }
 `;
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Kaleb_Resume from '../images/Kaleb_Resume.pdf';
+import Navbar from './Navbar';
 
 const Section = styled.div`
     height: 100vh;
@@ -17,6 +18,7 @@ const Container = styled.div`
 const Resume = () => {
     return (
         <Section id="resume">
+            <Navbar />
             <div>Resume</div>
             <Container>
                 <iframe title="resume" src={Kaleb_Resume} width="50%" height="800px"/>
