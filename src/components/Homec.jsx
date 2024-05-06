@@ -62,7 +62,7 @@ const Right = styled.div`
 
 const animate = keyframes`
     to {
-        transform: translateY(50px);
+        transform: translateY(70px);
     }
 `;
 
