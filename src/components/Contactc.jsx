@@ -67,7 +67,7 @@ const Bottom = styled.div`
 
 const Icons = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 15px;
 `;
 
 const Contact = () => {
@@ -75,6 +75,11 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (!form.current[0].value || !form.current[1].value || !form.current[2].value) {
+      toast.error('Please fill out all fields!', { position: 'top-right' })
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -125,15 +130,10 @@ const Contact = () => {
         <Bottom>
           <div>Reach out to me</div>
           <form ref={form} onSubmit={sendEmail}>
-            <input id="name" type="text" name="from_name" placeholder="name" />
-            <input id="email" type="text" name="email" placeholder="email" />
-            <input
-              id="message"
-              type="text"
-              name="message"
-              placeholder="message"
-            />
-            <button type="submit">Submit</button>
+            <input id="name" type="text" name="from_name" placeholder="name" class="form-control" />
+            <input id="email" type="text" name="email" placeholder="email" class="form-control" />
+            <textarea id="message" type="text" name="message" placeholder="message" class="form-control" />
+            <button type="submit" class="btn btn-secondary">Submit</button>
           </form>
           <Toaster />
         </Bottom>

@@ -37,13 +37,15 @@ const Top = styled.div`
 const Bottom = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   height: 30vh;
+  width: 100%;
 `;
 
 const BottomText = styled.div`
   margin-right: 15px;
+  margin-bottom: 30px;
 `;
 
 const BoldText = styled.span`
@@ -51,6 +53,7 @@ const BoldText = styled.span`
 `;
 
 const Logos = styled.div`
+  width: 100%;
 `;
 
 const About = () => {
@@ -81,6 +84,15 @@ const About = () => {
           Android Studio
         </BottomText>
         <Logos>
+          <Canvas>
+            <OrbitControls enableZoom={false} />
+            <Stage>
+              <Python position={[-1400, 0, 0]} />
+            </Stage>
+            <Stage>
+              <C position={[0,0,0]} />
+            </Stage>
+          </Canvas>
         </Logos>
       </Bottom>
     </Section>

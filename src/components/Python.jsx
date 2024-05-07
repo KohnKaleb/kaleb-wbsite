@@ -14,7 +14,7 @@ import { useGLTF } from '@react-three/drei'
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/python-transformed.glb')
   return (
-    <group {...props} dispose={null}>
+    <group position={props.position} {...props} dispose={null}>
       <mesh geometry={nodes.Python_Python_0.geometry} material={materials.Python} rotation={[-Math.PI / 2, 0, 0]} />
     </group>
   )

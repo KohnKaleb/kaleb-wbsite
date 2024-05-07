@@ -25,6 +25,17 @@ const ListItem = styled.div`
 const AElements = styled.a`
     all: initial;
     cursor: pointer;
+    color: inherit; 
+    text-decoration: none; 
+    &:hover {
+        text-decoration: underline; 
+        text-decoration-color: purple;
+        color: purple;
+    }
+    &:focus {
+        text-decoration: underline; 
+        background-color: purple; 
+    }
 `
 
 const Icons = styled.div`
@@ -46,11 +57,11 @@ const Navbar = () => {
             <Container>
                 <Links>
                     <List>
-                        <ListItem><AElements href="#home">Home</AElements></ListItem>
-                        <ListItem><AElements href="#about">About</AElements></ListItem>
-                        <ListItem><AElements href="#projects">Projects</AElements></ListItem>
-                        <ListItem><AElements href="#resume">Resume</AElements></ListItem>
-                        <ListItem><AElements href="#contact">Contact</AElements></ListItem>
+                        <ListItem className="nav-item"><AElements className="nav-link" href="#home">Home</AElements></ListItem>
+                        <ListItem className="nav-item"><AElements className="nav-link" href="#about">About</AElements></ListItem>
+                        <ListItem className="nav-item"><AElements className="nav-link" href="#projects">Projects</AElements></ListItem>
+                        <ListItem className="nav-item"><AElements className="nav-link" href="#resume">Resume</AElements></ListItem>
+                        <ListItem className="nav-item"><AElements className="nav-link" href="#contact">Contact</AElements></ListItem>
                     </List>
                 </Links>
                 <Icons>
