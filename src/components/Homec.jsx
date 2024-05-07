@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Navbar from './Navbar';
 import TypeWriter from 'typewriter-effect';

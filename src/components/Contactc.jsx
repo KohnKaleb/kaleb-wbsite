@@ -8,8 +8,20 @@ import toast, { Toaster } from 'react-hot-toast';
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (max-width: 768px) {
+      height: 200vh;
+  }
 `;
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6%;
 `;
 
 const Top = styled.div`
@@ -17,8 +29,10 @@ const Top = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
-  top: 50px;
+
+  div {
+    margin-bottom: 15px;
+  }
 `;
 
 const Bottom = styled.div`
@@ -26,22 +40,28 @@ const Bottom = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  margin-top: 100px;
 
   form {
-    width: 20%;
+    width: 200%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
   }
 
   input {
     width: 100%;
+    height: 30px;
+    overflow-wrap: break-word;
   }
 
   #message {
     height: 100px;
+  }
+
+  div {
+    margin-bottom: 15px;
   }
 `;
 
