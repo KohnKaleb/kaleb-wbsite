@@ -5,6 +5,22 @@ import Navbar from "./Navbar";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import toast, { Toaster } from 'react-hot-toast';
 
+const GithubLogo = styled(FaGithub)`
+  color: purple;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+const LinkedinLogo = styled(FaLinkedin)`
+  color: purple;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  
+`
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
@@ -116,14 +132,14 @@ const Contact = () => {
               rel="noreferrer"
               href="https://github.com/KohnKaleb"
             >
-              <FaGithub style={{ fontSize: '4em' }}/>
+              <GithubLogo style={{ fontSize: '4em' }} />
             </a>
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://www.linkedin.com/in/kalebkohn/"
+              href="https://www.linkedin.com/in/kaleb-kohn-2a1b3622b/"
             >
-              <FaLinkedin style={{ fontSize: '4em' }}/>
+              <LinkedinLogo style={{ fontSize: '4em' }} />
             </a>
           </Icons>
         </Top>
