@@ -5,6 +5,7 @@ import Home from "./components/Homec.jsx";
 import Projects from "./components/Projectsc.jsx";
 import background from "./images/background.jpg";
 import Resume from "./components/Resume.jsx";
+import { useState } from 'react';
 
 const Container = styled.div`
   height: 100vh;
@@ -15,12 +16,15 @@ const Container = styled.div`
   scroll-behavior: smooth;
   overflow-y: auto;
   scrollbar-width: none;
+  font-family: var(--bs-font-sans-serif);
 `;
 
 function App() {
+  const [toggleLight, setToggleLight] = useState("light");
+
   return (
-    <Container>
-      <Home/>
+    <Container data-bs-theme={toggleLight} style={{ color: toggleLight === "light" ? 'black' : "white"}}>
+      <Home toggleLight={toggleLight} setToggleLight={setToggleLight}/>
       <About/>
       <Projects/>
       <Resume/>

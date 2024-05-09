@@ -3,6 +3,8 @@ import styled, { keyframes } from 'styled-components';
 import Navbar from './Navbar';
 import TypeWriter from 'typewriter-effect';
 import f22 from '../images/f22.png';
+import moon from '../images/moon.png';
+import sun from '../images/sun.png';
 
 const Section = styled.div`
     height: 100vh;
@@ -60,11 +62,29 @@ const Right = styled.div`
     }
 `;
 
+const TopCorner = styled.div`
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 30px;
+    z-index: 100;
+
+    @media only screen and (max-width: 768px) {
+        top: 0;
+        right: 0;
+    }
+`
+
 const animate = keyframes`
     to {
         transform: translateY(70px);
     }
 `;
+
+const Icon = styled.img`
+    width: 60px;
+    height: 60px;
+`
 
 const Img = styled.img`
     max-width: 40%;
@@ -77,11 +97,36 @@ const Img = styled.img`
     }
 `;
 
-const Home = () => {
+const PlainButton = styled.button`
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+`;
+
+const Home = ({ toggleLight, setToggleLight }) => {
+    const [icon, setIcon] = React.useState(moon)
+
+    const toggleDark = () => {
+        if (icon === moon) {
+            setIcon(sun)
+            setToggleLight("dark")
+        } else {
+            setIcon(moon)
+            setToggleLight("light")
+        }
+    }
+
     return (
         <Section id="home">
             <Navbar/>
             <Container>
+                <TopCorner>
+                    <PlainButton onClick={toggleDark}>
+                        <Icon src={icon} alt=""/>
+                    </PlainButton>
+                </TopCorner>
                 <Left>
                     <h1>Kaleb Kohn</h1>
                     <h3>Software Developer</h3>
