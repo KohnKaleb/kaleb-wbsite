@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const Section = styled.div`
     display: flex;
     justify-content: space-between;
@@ -23,24 +24,15 @@ const ListItem = styled.div`
 `
 
 const AElements = styled.a`
-    all: initial;
-    cursor: pointer;
     color: inherit; 
-    text-decoration: none; 
+
     &:hover {
-        text-decoration: underline; 
-        text-decoration-color: purple;
-        color: purple;
-    }
-    &:focus {
-        text-decoration: underline; 
-        background-color: purple; 
+        background-color: inherit;
     }
 `
 
 const Icons = styled.div`
 `
-
 
 const Container = styled.div`
     width: 1400px;
@@ -56,7 +48,7 @@ const Navbar = () => {
         <Section>
             <Container>
                 <Links>
-                    <List>
+                    <List className="nav nav-underline">
                         <ListItem className="nav-item"><AElements className="nav-link" href="#home">Home</AElements></ListItem>
                         <ListItem className="nav-item"><AElements className="nav-link" href="#about">About</AElements></ListItem>
                         <ListItem className="nav-item"><AElements className="nav-link" href="#projects">Projects</AElements></ListItem>

@@ -29,8 +29,7 @@ const Card = styled.div`
     height: 317px;
 
     &:hover {
-        border-color: purple;
-        box-shadow: 0 0 0 2px purple;
+        box-shadow: 0 0 0 2px;
     }
 `
 

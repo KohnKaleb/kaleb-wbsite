@@ -6,16 +6,12 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import toast, { Toaster } from 'react-hot-toast';
 
 const GithubLogo = styled(FaGithub)`
-  color: purple;
-
   &:hover {
     opacity: 0.8;
   }
 `;
 
 const LinkedinLogo = styled(FaLinkedin)`
-  color: purple;
-
   &:hover {
     opacity: 0.8;
   }
@@ -86,7 +82,7 @@ const Icons = styled.div`
   gap: 15px;
 `;
 
-const Contact = () => {
+const Contact = ({toggleLight, setToggleLight}) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -132,14 +128,14 @@ const Contact = () => {
               rel="noreferrer"
               href="https://github.com/KohnKaleb"
             >
-              <GithubLogo style={{ fontSize: '4em' }} />
+              <GithubLogo style={{ fontSize: '4em', color: toggleLight === "light" ? "white" : "rgb(110,168,254)" }} />
             </a>
             <a
               target="_blank"
               rel="noreferrer"
               href="https://www.linkedin.com/in/kaleb-kohn-2a1b3622b/"
             >
-              <LinkedinLogo style={{ fontSize: '4em' }} />
+              <LinkedinLogo style={{ fontSize: '4em', color: toggleLight === "light" ? "white" : "rgb(110,168,254)" }} />
             </a>
           </Icons>
         </Top>

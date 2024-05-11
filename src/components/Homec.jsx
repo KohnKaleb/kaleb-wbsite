@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Navbar from './Navbar';
 import TypeWriter from 'typewriter-effect';
 import f22 from '../images/f22.png';
 import moon from '../images/moon.png';
 import sun from '../images/sun.png';
+import space from '../images/space.jpeg';
+import sky from '../images/sky.png';
+import orion from '../images/orion.png';
 
 const Section = styled.div`
     height: 100vh;
@@ -105,16 +108,21 @@ const PlainButton = styled.button`
   margin: 0;
 `;
 
-const Home = ({ toggleLight, setToggleLight }) => {
+const Home = ({setToggleLight, setBackground }) => {
     const [icon, setIcon] = React.useState(moon)
+    const [aircraft, setAircraft] = React.useState(f22)
 
     const toggleDark = () => {
         if (icon === moon) {
             setIcon(sun)
+            setAircraft(orion)
             setToggleLight("dark")
+            setBackground(space)
         } else {
             setIcon(moon)
             setToggleLight("light")
+            setAircraft(f22)
+            setBackground(sky)
         }
     }
 
@@ -149,7 +157,7 @@ const Home = ({ toggleLight, setToggleLight }) => {
                     />
                 </Left>
                 <Right>
-                    <Img src={f22}/>
+                    <Img src={aircraft}/>
                 </Right>  
             </Container>
         </Section>
