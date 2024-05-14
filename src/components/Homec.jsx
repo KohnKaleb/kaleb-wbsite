@@ -108,7 +108,7 @@ const PlainButton = styled.button`
   margin: 0;
 `;
 
-const Home = ({setToggleLight, setBackground }) => {
+const Home = ({setToggleLight, setBackground, toggleLight }) => {
     const [icon, setIcon] = React.useState(moon)
     const [aircraft, setAircraft] = React.useState(f22)
 
@@ -128,7 +128,7 @@ const Home = ({setToggleLight, setBackground }) => {
 
     return (
         <Section id="home">
-            <Navbar/>
+            <Navbar toggleLight={toggleLight} />
             <Container>
                 <TopCorner>
                     <PlainButton onClick={toggleDark}>

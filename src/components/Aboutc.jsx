@@ -8,7 +8,6 @@ import Css from "./Css";
 import Html from "./Html";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stage } from '@react-three/drei'
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 
 const Section = styled.div`

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import '../scss/Navbar.scss';
 
 const Section = styled.div`
     display: flex;
@@ -17,18 +17,14 @@ const List = styled.div`
     display: flex;
     gap: 20px;
     list-style: none;
-`;
+`
 
 const ListItem = styled.div`
     cursor: pointer;
 `
 
 const AElements = styled.a`
-    color: inherit; 
-
-    &:hover {
-        background-color: inherit;
-    }
+    color: inherit;
 `
 
 const Icons = styled.div`
@@ -43,12 +39,12 @@ const Container = styled.div`
 
 `;
 
-const Navbar = () => {
+const Navbar = ({toggleLight}) => {
     return (
         <Section>
             <Container>
                 <Links>
-                    <List className="nav nav-underline">
+                    <List className={toggleLight === "light" ? "nav nav-underline nav-light" : "nav nav-underline"}>
                         <ListItem className="nav-item"><AElements className="nav-link" href="#home">Home</AElements></ListItem>
                         <ListItem className="nav-item"><AElements className="nav-link" href="#about">About</AElements></ListItem>
                         <ListItem className="nav-item"><AElements className="nav-link" href="#projects">Projects</AElements></ListItem>
@@ -56,11 +52,10 @@ const Navbar = () => {
                         <ListItem className="nav-item"><AElements className="nav-link" href="#contact">Contact</AElements></ListItem>
                     </List>
                 </Links>
-                <Icons>
-                </Icons>
+                <Icons></Icons>
             </Container>
         </Section>
     )
 }
 
-export default Navbar
+export default Navbar;
