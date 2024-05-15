@@ -118,7 +118,7 @@ const Contact = ({toggleLight, setToggleLight}) => {
 
   return (
     <Section id="contact">
-      <Navbar />
+      <Navbar toggleLight={toggleLight} />
       <Container>
         <Top>
           <div>Follow me on socials</div>

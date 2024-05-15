@@ -39,10 +39,10 @@ const CardImg = styled.img`
     height: '100%';
 `
 
-const Projects = () => {
+const Projects = ({toggleLight}) => {
     return (
         <Section id="projects">          
-            <Navbar />
+            <Navbar toggleLight={toggleLight}/>
             <Cards>
                 <Card className="card">
                     <CardImg src={BarHop} style={{height: "125px"}} className="card-img-top img-fluid" alt="The login page of a mobile application" />

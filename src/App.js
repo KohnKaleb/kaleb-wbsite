@@ -24,11 +24,11 @@ function App() {
 
   return (
     <Container data-bs-theme={toggleLight} style={{ color: toggleLight === "light" ? 'black' : "#DEE2E6", backgroundImage: `url(${background})` }}>
-      <Home toggleLight={toggleLight} setToggleLight={setToggleLight} background={background} setBackground={setBackground}/>
-      <About/>
-      <Projects/>
-      <Resume/>
-      <Contact toggleLight={toggleLight} setToggleLight={setToggleLight}/>
+      <Home toggleLight={toggleLight} setToggleLight={setToggleLight} background={background} setBackground={setBackground} />
+      <About toggleLight={toggleLight} />
+      <Projects toggleLight={toggleLight} />
+      <Resume toggleLight={toggleLight} />
+      <Contact toggleLight={toggleLight} setToggleLight={setToggleLight} />
     </Container>
   );
 }

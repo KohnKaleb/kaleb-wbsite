@@ -34,10 +34,10 @@ const IframeContainer = styled.div`
     top: -50px;
 `
 
-const Resume = () => {
+const Resume = ({toggleLight}) => {
     return (
         <Section id="resume">
-            <Navbar />
+            <Navbar toggleLight={toggleLight}/>
             <Container>
                 <IframeContainer>
                     <iframe title="resume" src={Kaleb_Resume} width="50%" height="800px"/>
