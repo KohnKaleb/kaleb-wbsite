@@ -23,7 +23,7 @@ const Container = styled.div`
     width: 100%;
 `
 
-const IframeContainer = styled.div`
+const ObjectContainer = styled.div`
     width: 100%;
     max-width: 100%;
     height: 100%;
@@ -39,9 +39,11 @@ const Resume = ({toggleLight}) => {
         <Section id="resume">
             <Navbar toggleLight={toggleLight}/>
             <Container>
-                <IframeContainer>
-                    <iframe title="resume" src={Kaleb_Resume} width="50%" height="800px"/>
-                </IframeContainer>
+                <ObjectContainer>
+                <object data={Kaleb_Resume} type="application/pdf" width="35%" height="820px">
+                    <p>Unable to display PDF file. <a href={Kaleb_Resume}>Download</a> instead.</p>
+                </object>
+                </ObjectContainer>
             </Container>
         </Section>
     )

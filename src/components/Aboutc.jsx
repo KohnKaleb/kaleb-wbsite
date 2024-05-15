@@ -30,10 +30,6 @@ const Top = styled.div`
 const Text = styled.div`
 `;
 
-const NextContainer = styled.div`
-  right: -50px;
-`;
-
 const Bottom = styled.div`
   display: flex;
   justify-content: center;
