@@ -121,7 +121,7 @@ const Contact = ({toggleLight, setToggleLight}) => {
       <Navbar toggleLight={toggleLight} />
       <Container>
         <Top>
-          <div>Follow me on socials</div>
+          <div style={{fontSize: "17px"}}>Follow me on socials</div>
           <Icons>
             <a
               target="_blank"
@@ -140,7 +140,7 @@ const Contact = ({toggleLight, setToggleLight}) => {
           </Icons>
         </Top>
         <Bottom>
-          <div>Reach out to me</div>
+          <div style={{fontSize: "17px"}}>Reach out to me</div>
           <form ref={form} onSubmit={sendEmail}>
             <input id="name" type="text" name="from_name" placeholder="name" class="form-control" />
             <input id="email" type="text" name="email" placeholder="email" class="form-control" />
