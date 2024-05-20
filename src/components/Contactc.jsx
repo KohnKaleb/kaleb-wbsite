@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import Navbar from "./Navbar";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 import toast, { Toaster } from 'react-hot-toast';
 
 const GithubLogo = styled(FaGithub)`
@@ -15,8 +15,14 @@ const LinkedinLogo = styled(FaLinkedin)`
   &:hover {
     opacity: 0.8;
   }
-  
 `
+
+const DiscordLogo = styled(FaDiscord)`
+  &:hover {
+    opacity: 0.8;
+  }
+`
+
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
@@ -136,6 +142,13 @@ const Contact = ({toggleLight, setToggleLight}) => {
               href="https://www.linkedin.com/in/kaleb-kohn-2a1b3622b/"
             >
               <LinkedinLogo style={{ fontSize: '4em', color: toggleLight === "light" ? "white" : "rgb(110,168,254)" }} />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://discordapp.com/users/7071"
+            >
+              <DiscordLogo style={{ fontSize: '4em', color: toggleLight === "light" ? "white" : "rgb(110,168,254)" }} />
             </a>
           </Icons>
         </Top>
