@@ -115,7 +115,6 @@ const Contact = ({toggleLight, setToggleLight}) => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-          toast.error('Message failed to send!', { position: 'top-right' })
         }
       );
 
@@ -155,9 +154,9 @@ const Contact = ({toggleLight, setToggleLight}) => {
         <Bottom>
           <div style={{fontSize: "17px"}}>Reach out to me</div>
           <form ref={form} onSubmit={sendEmail}>
-            <input id="name" type="text" name="from_name" placeholder="name" class="form-control" />
-            <input id="email" type="text" name="email" placeholder="email" class="form-control" />
-            <textarea id="message" type="text" name="message" placeholder="message" class="form-control" />
+            <input id="name" type="text" name="from_name" placeholder="name" class="form-control" required/>
+            <input id="email" type="text" name="email" placeholder="email" class="form-control" required/>
+            <textarea id="message" type="text" name="message" placeholder="message" class="form-control" required/>
             <button type="submit" class="btn btn-secondary">Submit</button>
           </form>
           <Toaster />
