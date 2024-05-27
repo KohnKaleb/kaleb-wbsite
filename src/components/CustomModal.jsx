@@ -1,5 +1,5 @@
 import Modal from 'react-bootstrap/Modal';
-import { Pie, XAxis, Legend, Bar, BarChart, ResponsiveContainer, PieChart, Tooltip, Cell } from 'recharts';
+import { Pie, XAxis, Legend, LineChart, Line, Bar, BarChart, ResponsiveContainer, PieChart, Tooltip, Cell } from 'recharts';
 
 const CustomModal = ({ modalHeading, modalBody, showModal, setShowModal, toggleLight, pieData, barData }) => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -42,12 +42,12 @@ const CustomModal = ({ modalHeading, modalBody, showModal, setShowModal, toggleL
           </PieChart>
         </ResponsiveContainer>
         <ResponsiveContainer width="100%" height={400}>
-            <BarChart width={150} height={40} data={barData}>
+            <LineChart width={150} height={40} data={barData}>
               <XAxis dataKey="name" />
               <Tooltip />
               <Legend />
-              <Bar dataKey="value" fill="#8884d8" />
-            </BarChart>
+              <Line type="monotone" dataKey="value" fill="#8884d8" />
+            </LineChart>
         </ResponsiveContainer>
       </Modal.Body>
     </Modal>

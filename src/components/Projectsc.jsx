@@ -49,14 +49,14 @@ const Projects = ({toggleLight}) => {
 
     const projectText = (project) => {
         switch (project) {
-            case "barHop":
+            case "Bar Hop":
                 return () => {
                     setShowModal(true);
                     setProjectHead(project);
                     setPieData([{name: "Java", value: 100}]);
                     setBarData([{name: "10/15 - 10/21", value: 2}, {name: "10/29 - 11/4", value: 2},  {name: "11/5 - 11/11", value: 6}, {name: "11/12 - 11/18", value: 1}, {name: "11/19 - 11/25", value: 6}, {name: "11/26 - 12/2", value: 7}, {name: "12/3 - 12/9", value: 3}, {name: "12/10 - 12/16", value: 4}])
                 }
-            case "runCrafter":
+            case "Run Crafter":
                 return () => {
                     setShowModal(true);
                     setProjectHead(project);
@@ -74,7 +74,7 @@ const Projects = ({toggleLight}) => {
         <Navbar toggleLight={toggleLight} />
         <CustomModal showModal={showModal} toggleLight={toggleLight} setShowModal={setShowModal} modalHeading={projectHead} modalBody="body" pieData={pieData} barData={barData} />
         <Cards>
-          <div onClick={projectText("barHop")}>
+          <div onClick={projectText("Bar Hop")}>
             <Card className="card">
               <CardImg
                 src={BarHop}
@@ -99,7 +99,7 @@ const Projects = ({toggleLight}) => {
               </div>
             </Card>
           </div>
-          <div onClick={projectText("runCrafter")}>
+          <div onClick={projectText("Run Crafter")}>
             <Card className="card">
               <CardImg
                 src={RunCrafter}
