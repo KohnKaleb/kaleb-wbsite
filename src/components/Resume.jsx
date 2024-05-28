@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 const Section = styled.div`
     height: 100vh;
     scroll-snap-align: center;
+    scroll-snap-type: y mandatory;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,6 +33,7 @@ const ObjectContainer = styled.div`
     align-items: center;
     position: relative;
     top: -50px;
+    overflow: auto;
 `
 
 const Resume = ({toggleLight}) => {

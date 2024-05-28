@@ -26,6 +26,7 @@ const DiscordLogo = styled(FaDiscord)`
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+  scroll-snap-type: y mandatory;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +50,7 @@ const Top = styled.div`
   flex-direction: column;
 
   div {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 `;
 
@@ -79,7 +80,7 @@ const Bottom = styled.div`
   }
 
   div {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 `;
 

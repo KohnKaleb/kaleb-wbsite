@@ -12,6 +12,7 @@ import { OrbitControls, Stage } from '@react-three/drei';
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+  scroll-snap-type: y mandatory;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +47,7 @@ const Bottom = styled.div`
 
 const BottomText = styled.div`
   margin-right: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 `;
 
 const BoldText = styled.span`

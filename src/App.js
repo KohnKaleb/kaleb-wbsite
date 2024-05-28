@@ -13,6 +13,7 @@ const Container = styled.div`
   background-position: center;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  transition: scroll-snap-align 0.5s ease-in-out;
   overflow-y: auto;
   scrollbar-width: none;
   font-family: var(--bs-font-sans-serif);
