@@ -46,6 +46,7 @@ const Projects = ({toggleLight}) => {
     const [projectHead, setProjectHead] = useState("");
     const [pieData, setPieData] = useState([]);
     const [barData, setBarData] = useState([]);
+    const [modalBody, setModalBody] = useState(0);
 
     const projectText = (project) => {
         switch (project) {
@@ -55,6 +56,7 @@ const Projects = ({toggleLight}) => {
                     setProjectHead(project);
                     setPieData([{name: "Java", value: 100}]);
                     setBarData([{name: "10/15 - 10/21", value: 2}, {name: "10/29 - 11/4", value: 2},  {name: "11/5 - 11/11", value: 6}, {name: "11/12 - 11/18", value: 1}, {name: "11/19 - 11/25", value: 6}, {name: "11/26 - 12/2", value: 7}, {name: "12/3 - 12/9", value: 3}, {name: "12/10 - 12/16", value: 4}])
+                    setModalBody(2732);
                 }
             case "Run Crafter":
                 return () => {
@@ -62,7 +64,7 @@ const Projects = ({toggleLight}) => {
                     setProjectHead(project);
                     setPieData([{name: "Python", value: 69.8}, {name: "HTML", value: 26.3}, {name: "CSS", value: 3.9}]);
                     setBarData([{name: "9/24 - 9/30", value: 18}, {name: "10/1 - 10/7", value: 11},  {name: "10/8 - 10/14", value: 4}, {name: "10/15 - 10/21", value: 2}])
-                
+                    setModalBody(1042);
                 }
             default:
               return () => {}
@@ -72,7 +74,7 @@ const Projects = ({toggleLight}) => {
     return (
       <Section id="projects">
         <Navbar toggleLight={toggleLight} />
-        <CustomModal showModal={showModal} toggleLight={toggleLight} setShowModal={setShowModal} modalHeading={projectHead} modalBody="body" pieData={pieData} barData={barData} />
+        <CustomModal showModal={showModal} toggleLight={toggleLight} setShowModal={setShowModal} modalHeading={projectHead} modalBody={modalBody} pieData={pieData} barData={barData} />
         <Cards>
           <div onClick={projectText("Bar Hop")}>
             <Card className="card">

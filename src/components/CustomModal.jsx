@@ -3,7 +3,6 @@ import { Pie, XAxis, Legend, LineChart, Line, ResponsiveContainer, PieChart, Too
 
 const CustomModal = ({ modalHeading, modalBody, showModal, setShowModal, toggleLight, pieData, barData }) => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-  console.log(barData);
   return (
     <Modal
       size="lg"
@@ -22,7 +21,13 @@ const CustomModal = ({ modalHeading, modalBody, showModal, setShowModal, toggleL
       <Modal.Body
         style={{ color: toggleLight === "light" ? "black" : "white" }}
       >
-          <ResponsiveContainer width="100%" height={400}>
+        <h2>
+          Lines of Code: {modalBody}
+        </h2><br />
+        <h2>
+          Languages Used
+        </h2>
+        <ResponsiveContainer width="100%" height={400}>
           <PieChart>
             <Pie
               data={pieData}
@@ -35,19 +40,25 @@ const CustomModal = ({ modalHeading, modalBody, showModal, setShowModal, toggleL
               label
             >
               {pieData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
               ))}
             </Pie>
             <Tooltip />
           </PieChart>
         </ResponsiveContainer>
+        <h2>
+          Commits Over Time
+        </h2>
         <ResponsiveContainer width="100%" height={400}>
-            <LineChart width={150} height={40} data={barData}>
-              <XAxis dataKey="name" />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="value" fill="#8884d8" />
-            </LineChart>
+          <LineChart width={150} height={40} data={barData}>
+            <XAxis dataKey="name" />
+            <Tooltip />
+            <Legend />
+            <Line type="monotone" dataKey="value" fill="#8884d8" />
+          </LineChart>
         </ResponsiveContainer>
       </Modal.Body>
     </Modal>
