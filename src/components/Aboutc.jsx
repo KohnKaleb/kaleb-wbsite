@@ -146,33 +146,33 @@ const About = ({toggleLight}) => {
           Node.js, Express, Android Studio
         </BottomText>
         <Logos>
-          <Canvas style={{ width: "100vw", height: "50vh" }}>
+          <Canvas style={{ width: "100vw", height: "40vh" }}>
               <group scale={[2, 2, 2]}>
                 <Stage>
                   <Python
-                    position={[-80, 0, 0]}
-                    scale={[2, 2, 2]}
-                    rotation={[0, 0.01, 0]}
+                    position={[-280, 0, 0]}
+                    scale={[5.3, 5.3, 5.3]}
+                    rotation={[0, 0, 0]}
                   />
                   <C
-                    position={[80, 0, 0]}
-                    scale={[2, 2, 2]}
-                    rotation={[0, 0.01, 0]}
+                    position={[60, 0, 0]}
+                    scale={[5.3, 5.3, 5.3]}
+                    rotation={[0, 0, 0]}
                   />
                   <ReactModel
-                    position={[220, 0, 0]}
-                    scale={[25, 25, 25]}
-                    rotation={[0, 0.01, 0]}
+                    position={[380, 0, 0]}
+                    scale={[73, 73, 73]}
+                    rotation={[0, 0, 0]}
                   />
                   <Html
-                    position={[-205, -110, 0]}
-                    scale={[0.6, 0.6, 0.6]}
-                    rotation={[0, 0.01, 0]}
+                    position={[-550, -285, 0]}
+                    scale={[1.5, 1.5, 1.5]}
+                    rotation={[0, 0, 0]}
                   />
                   <Css
-                    position={[340, -110, 0]}
-                    scale={[0.55, 0.55, 0.55]}
-                    rotation={[0, 0.01, 0]}
+                    position={[670, -285, 0]}
+                    scale={[1.5, 1.5, 1.5]}
+                    rotation={[0, 0, 0]}
                   />
                 </Stage>
               </group>
