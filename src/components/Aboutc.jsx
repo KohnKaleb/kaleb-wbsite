@@ -14,6 +14,7 @@ const Section = styled.div`
   scroll-snap-align: center;
   scroll-snap-type: y mandatory;
   display: flex;
+  position: sticky;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -146,7 +147,7 @@ const About = ({toggleLight}) => {
           Node.js, Express, Android Studio
         </BottomText>
         <Logos>
-          <Canvas style={{ width: "100vw", height: "40vh" }}>
+          <Canvas style={{ width: "100vw", height: "40vh"}}>
               <group scale={[2, 2, 2]}>
                 <Stage>
                   <Python

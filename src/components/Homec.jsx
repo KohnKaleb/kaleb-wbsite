@@ -84,6 +84,7 @@ const animate = keyframes`
 `;
 
 const Icon = styled.img`
+    z-index: 5000;
     width: 60px;
     height: 60px;
 `
@@ -100,6 +101,7 @@ const Img = styled.img`
 `;
 
 const PlainButton = styled.button`
+    z-index: 5000;
   border: none;
   background: none;
   cursor: pointer;

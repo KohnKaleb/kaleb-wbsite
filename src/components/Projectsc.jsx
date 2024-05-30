@@ -14,6 +14,7 @@ const Section = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: sticky;
 
     @media only screen and (max-width: 768px) {
         height: 200vh;
@@ -43,6 +44,11 @@ const CardImg = styled.img`
     width: '100%';
     height: '100%';
 `
+
+const NavStyle = {
+  zIndex: 2000
+}
+  
 
 const Projects = ({toggleLight}) => {
     const [showModal, setShowModal] = useState(false);
@@ -84,7 +90,7 @@ const Projects = ({toggleLight}) => {
 
     return (
       <Section id="projects">
-        <Navbar toggleLight={toggleLight} />
+          <Navbar toggleLight={toggleLight} style={NavStyle} />
         <CustomModal showModal={showModal} toggleLight={toggleLight} setShowModal={setShowModal} modalHeading={projectHead} modalBody={modalBody} pieData={pieData} barData={barData} />
         <Cards>
           <div onClick={projectText("Bar Hop")}>
