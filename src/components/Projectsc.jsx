@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Navbar from './Navbar';
 import BarHop from '../images/BarHop.png';
 import RunCrafter from '../images/RunCrafter.png';
+import OpeningChessPractice from '../images/OpeningChess.png';
 import CustomModal from './CustomModal';
 
 
@@ -33,6 +34,7 @@ const Card = styled.div`
 
     &:hover {
         box-shadow: 0 0 0 2px;
+        transform: translate3d(0px, -1px, 0px);
     }
 `
 
@@ -66,6 +68,14 @@ const Projects = ({toggleLight}) => {
                     setPieData([{name: "Python", value: 69.8}, {name: "HTML", value: 26.3}, {name: "CSS", value: 3.9}]);
                     setBarData([{name: "9/24 - 9/30", value: 18}, {name: "10/1 - 10/7", value: 11},  {name: "10/8 - 10/14", value: 4}, {name: "10/15 - 10/21", value: 2}])
                     setModalBody(1042);
+                }
+            case "Opening Chess Practice":
+                return () => {
+                    setShowModal(true);
+                    setProjectHead(project);
+                    setPieData([{name: "JavaScript", value: 92.8}, {name: "HTML", value: 3.3}, {name: "CSS", value: 3.9}]);
+                    setBarData([{name: "3/19 - 3/25", value: 2}, {name: "3/26 - 4/1", value: 5},  {name: "4/2 - 4/8", value: 4}, {name: "4/9 - 4/15", value: 1}, {name: "4/16 - 4/22", value: 10}, {name: "4/23 - 4/29", value: 2}, {name: "4/30 - 5/6", value: 7}]);
+                    setModalBody(5938);
                 }
             default:
               return () => {}
@@ -117,6 +127,30 @@ const Projects = ({toggleLight}) => {
                 </p>
                 <a
                   href="https://github.com/KohnKaleb/create_my_runs"
+                  className="btn btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Github
+                </a>
+              </div>
+            </Card>
+          </div>
+          <div onClick={projectText("Opening Chess Practice")}>
+            <Card className="card">
+              <CardImg
+                src={OpeningChessPractice}
+                className="card-img-top img-fluid"
+                alt="A map with various running routes"
+              />
+              <div class="card-body">
+                <h5 className="card-title">Opening Chess Practice</h5>
+                <p className="card-text">
+                  Website that lets chess practitioners practice 
+                  their desired opening lines for move correctness
+                </p>
+                <a
+                  href="https://github.com/KohnKaleb/Opening-Chess-Practice"
                   className="btn btn-primary"
                   target="_blank"
                   rel="noreferrer"

@@ -7,6 +7,8 @@ const Section = styled.div`
     height: 100vh;
     scroll-snap-align: center;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    transition: scroll-snap-align 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +35,6 @@ const ObjectContainer = styled.div`
     align-items: center;
     position: relative;
     top: -50px;
-    overflow: auto;
 `
 
 const Resume = ({toggleLight}) => {
