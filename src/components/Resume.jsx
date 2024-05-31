@@ -43,7 +43,7 @@ const Resume = ({toggleLight}) => {
             <Navbar toggleLight={toggleLight}/>
             <Container>
                 <ObjectContainer>
-                <object data={Kaleb_Resume} type="application/pdf" width="35%" height="820px">
+                <object data={Kaleb_Resume} type="application/pdf" width="35%" height="830vh">
                     <p>Unable to display PDF file. <a href={Kaleb_Resume}>Download</a> instead.</p>
                 </object>
                 </ObjectContainer>
