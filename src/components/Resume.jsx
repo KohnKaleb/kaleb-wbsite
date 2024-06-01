@@ -14,8 +14,8 @@ const Section = styled.div`
     align-items: center;
     justify-content: space-between;    
 
-    @media only screen and (max-width: 768px) {
-        height: 100vh;
+    @media only screen and (max-width: 900px) {
+        height: 600vh;
     }
 `
 
