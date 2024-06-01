@@ -101,7 +101,7 @@ const Img = styled.img`
 `;
 
 const PlainButton = styled.button`
-    z-index: 5000;
+z-index: 5000;
   border: none;
   background: none;
   cursor: pointer;

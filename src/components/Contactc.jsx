@@ -89,7 +89,7 @@ const Icons = styled.div`
   gap: 15px;
 `;
 
-const Contact = ({toggleLight, setToggleLight}) => {
+const Contact = ({toggleLight}) => {
   const form = useRef();
 
   const sendEmail = (e) => {

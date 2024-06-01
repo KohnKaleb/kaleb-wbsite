@@ -7,7 +7,7 @@ Source: https://sketchfab.com/3d-models/css-logo-3d-model-17b34c2b98714c67995449
 Title: CSS logo 3d model
 */
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Css(props) {

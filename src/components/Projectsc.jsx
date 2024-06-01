@@ -48,7 +48,6 @@ const CardImg = styled.img`
 const NavStyle = {
   zIndex: 2000
 }
-  
 
 const Projects = ({toggleLight}) => {
     const [showModal, setShowModal] = useState(false);
