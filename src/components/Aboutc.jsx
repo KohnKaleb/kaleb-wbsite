@@ -29,7 +29,7 @@ const Top = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  max-width: 1450px;
+  max-width: 150vh;
   margin: 0 auto;
   height: 50vh;
 `;
