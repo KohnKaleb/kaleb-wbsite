@@ -6,36 +6,46 @@ import Navbar from './Navbar';
 const Section = styled.div`
     height: 100vh;
     scroll-snap-align: center;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    transition: scroll-snap-align 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;  
 
-    @media only screen and (max-width: 900px) {
-        height: 600vh;
+    @media (min-width: 768px) {
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+        transition: scroll-snap-align 0.5s ease-in-out;
     }
-`
+
+    object {
+        width: 30%;
+        max-width: 600px;
+        height: 89vh;
+
+        @media (min-width: 768px) {
+            width: 35%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 30%;
+        }
+    }
+`;
 
 const Container = styled.div`
-    display: grid;
-    place-items: center;
-    height: auto;
-    width: 100%;
-`
-
-const ObjectContainer = styled.div`
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: -50px;
-`
+    width: 100%;
+    height: 100%;
+`;
+
+const ObjectContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
 const Resume = ({toggleLight}) => {
     return (
@@ -43,13 +53,13 @@ const Resume = ({toggleLight}) => {
             <Navbar toggleLight={toggleLight}/>
             <Container>
                 <ObjectContainer>
-                <object data={Kaleb_Resume} type="application/pdf" width="35%" height="830vh">
-                    <p>Unable to display PDF file. <a href={Kaleb_Resume}>Download</a> instead.</p>
-                </object>
+                    <object data={Kaleb_Resume} type="application/pdf">
+                        <p>Unable to display PDF file. <a href={Kaleb_Resume}>Download</a> instead.</p>
+                    </object>
                 </ObjectContainer>
             </Container>
         </Section>
-    )
+    );
 }
 
-export default Resume
+export default Resume;
