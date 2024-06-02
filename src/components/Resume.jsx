@@ -20,7 +20,7 @@ const Section = styled.div`
     object {
         width: 30%;
         max-width: 600px;
-        height: 89vh;
+        height: 82vh;
 
         @media (min-width: 768px) {
             width: 35%;
