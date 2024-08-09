@@ -167,4 +167,4 @@ const Contact = ({toggleLight}) => {
   );
 };
 
-export default Contact;
+export default React.memo(Contact);

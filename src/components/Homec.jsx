@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import styled, { keyframes } from 'styled-components';
 import Navbar from './Navbar';
 import TypeWriter from 'typewriter-effect';
@@ -113,19 +113,19 @@ const Home = ({setToggleLight, setBackground, toggleLight }) => {
     const [icon, setIcon] = React.useState(moon)
     const [aircraft, setAircraft] = React.useState(f22)
 
-    const toggleDark = () => {
+    const toggleDark = useCallback(() => {
         if (icon === moon) {
-            setIcon(sun)
-            setAircraft(orion)
-            setToggleLight("dark")
-            setBackground(space)
+            setIcon(sun);
+            setAircraft(orion);
+            setToggleLight("dark");
+            setBackground(space);
         } else {
-            setIcon(moon)
-            setToggleLight("light")
-            setAircraft(f22)
-            setBackground(sky)
+            setIcon(moon);
+            setToggleLight("light");
+            setAircraft(f22);
+            setBackground(sky);
         }
-    }
+    }, [icon, setToggleLight, setBackground]);
 
     return (
         <Section id="home">
@@ -165,4 +165,4 @@ const Home = ({setToggleLight, setBackground, toggleLight }) => {
     )
 }
 
-export default Home
+export default React.memo(Home)

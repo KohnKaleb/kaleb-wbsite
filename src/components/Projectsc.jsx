@@ -170,4 +170,4 @@ const Projects = ({toggleLight}) => {
     );
 }
 
-export default Projects
+export default React.memo(Projects)

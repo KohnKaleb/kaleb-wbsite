@@ -62,4 +62,4 @@ const Resume = ({toggleLight}) => {
     );
 }
 
-export default Resume;
+export default React.memo(Resume);
