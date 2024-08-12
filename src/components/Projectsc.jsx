@@ -106,14 +106,14 @@ const Projects = ({toggleLight}) => {
                   Android Social Media App connecting people through bars they
                   visit
                 </p>
-                <a
-                  href="https://github.com/KohnKaleb/BarHop"
-                  className="btn btn-primary"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Github
-                </a>
+                  <a
+                    href="https://github.com/KohnKaleb/BarHop"
+                    className="btn btn-primary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Github
+                  </a>
               </div>
             </Card>
           </div>
@@ -130,6 +130,7 @@ const Projects = ({toggleLight}) => {
                   Website that allows runners to choose different running routes
                   based on some chosen criteria
                 </p>
+                <div style={{ display: "flex", justifyContent: "flex-start", gap: "5%" }}>
                 <a
                   href="https://github.com/KohnKaleb/create_my_runs"
                   className="btn btn-primary"
@@ -138,6 +139,15 @@ const Projects = ({toggleLight}) => {
                 >
                   Github
                 </a>
+                <a
+                    href="https://routely.vercel.app/"
+                    className="btn btn-primary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Website
+                  </a>
+                </div>
               </div>
             </Card>
           </div>
