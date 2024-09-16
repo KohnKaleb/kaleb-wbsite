@@ -8,7 +8,7 @@ import CustomModal from './CustomModal';
 
 
 const Section = styled.div`
-    height: 100vh;
+    height: 100%;
     scroll-snap-align: center;
     scroll-snap-type: y mandatory;
     display: flex;
@@ -25,13 +25,13 @@ const Cards = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 20px;
+    gap: 3%;
     flex: 1;
 `
 
 const Card = styled.div`
     width: 18rem;
-    height: 317px;
+    height: 10%;
 
     &:hover {
         box-shadow: 0 0 0 2px;

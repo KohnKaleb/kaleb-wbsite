@@ -4,7 +4,7 @@ import Kaleb_Resume from '../images/Kaleb_Resume.pdf';
 import Navbar from './Navbar';
 
 const Section = styled.div`
-    height: 100vh;
+    height: 100%;
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
@@ -19,8 +19,8 @@ const Section = styled.div`
 
     object {
         width: 30%;
-        max-width: 600px;
-        height: 82vh;
+        max-width: 50%;
+        height: 100%;
 
         @media (min-width: 768px) {
             width: 35%;
@@ -42,6 +42,7 @@ const Container = styled.div`
 
 const ObjectContainer = styled.div`
     width: 100%;
+    height: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
