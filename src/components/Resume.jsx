@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Kaleb_Resume from '../images/Kaleb_Resume.pdf';
+import Kaleb_Resume from '../images/KalebResume.pdf';
 import Navbar from './Navbar';
 
 const Section = styled.div`
